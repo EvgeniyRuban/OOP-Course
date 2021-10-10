@@ -14,6 +14,18 @@ namespace OOP_GB
         private static uint _accountCounter;
 
 
+        public BankAccount() : this(BankAccountType.Checking) { }
+
+        public BankAccount(BankAccountType type) : this(type, 0) { }
+
+        public BankAccount(BankAccountType type, decimal balance)
+        {
+            _number = GenerateAccountNumber();
+            _balance = balance;
+            _type = type;
+        }
+
+
         /// <returns>Return 'true', if operation completed successfully</returns>
         public bool Deposit(decimal amount)
         {
