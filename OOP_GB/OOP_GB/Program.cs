@@ -1,4 +1,5 @@
 ﻿using System;
+using OOP_GB.Enums;
 
 namespace OOP_GB
 {
@@ -6,12 +7,17 @@ namespace OOP_GB
     {
         static void Main(string[] args)
         {
-            BankAccount[] myAccounts = new BankAccount[20];
-            for (int i = 0; i < myAccounts.Length; i++)
+            BankAccount testAccount = new BankAccount(BankAccountType.Checking, 10000);
+            decimal transactionSize = 999.99M;
+            Console.WriteLine("Init state:\n");
+            Console.WriteLine(testAccount.GetInfo());
+            do
             {
-                myAccounts[i] = new BankAccount();
-                Console.WriteLine(myAccounts[i].GetInfo());
+                Console.WriteLine($"Transaction: {transactionSize}");
+                Console.WriteLine($"Balance: {testAccount.Balance}\n");
             }
+            while (testAccount.Withdraw(transactionSize));
+            Console.ReadKey();
         }
     }
 }
