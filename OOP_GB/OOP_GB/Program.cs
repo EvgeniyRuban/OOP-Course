@@ -6,8 +6,12 @@ namespace OOP_GB
     {
         static void Main(string[] args)
         {
-            BankAccount myAccount = new BankAccount();
-            Console.WriteLine(myAccount.GetInfo());
+            BankAccount[] myAccounts = new BankAccount[20];
+            for (int i = 0; i < myAccounts.Length; i++)
+            {
+                myAccounts[i] = new BankAccount();
+                Console.WriteLine(myAccounts[i].GetInfo());
+            }
         }
     }
 }

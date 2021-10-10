@@ -1,4 +1,5 @@
 ﻿using OOP_GB.Enums;
+using System.Text;
 
 namespace OOP_GB
 {
@@ -6,9 +7,11 @@ namespace OOP_GB
     {
         private readonly BankAccountType _type = BankAccountType.Checking;
 
-        private string _number = "00000000000000000000";
+        private readonly string _number;
 
         private decimal _balance;
+
+        private static uint _accountCounter;
 
 
         /// <returns>Return 'true', if operation completed successfully</returns>
@@ -36,8 +39,19 @@ namespace OOP_GB
         {
             return $"Account numbet: {_number}\n" +
                     $"Type: {_type}\n" +
-                    $"Balance: {_balance}";
-                     
+                    $"Balance: {_balance}\n";
+        }
+
+        private static string GenerateAccountNumber()
+        {
+            int accountNumberLength = 20;
+            int emptySymbolCount = accountNumberLength - _accountCounter.ToString().Length;
+            StringBuilder result = new StringBuilder(accountNumberLength);
+            for (int i = 0; i < emptySymbolCount; i++)
+                result.Append('0');
+            result.Append(_accountCounter.ToString());
+            _accountCounter++;
+            return result.ToString();
         }
     }
 }
