@@ -8,9 +8,11 @@ namespace OOP_GB
         static void Main(string[] args)
         {
             BankAccount testAccount = new BankAccount(BankAccountType.Checking, 10000);
+            BankAccount testAccount1 = new BankAccount(BankAccountType.Checking, 10000);
             decimal transactionSize = 999.99M;
             Console.WriteLine("Init state:\n");
             Console.WriteLine(testAccount.GetInfo());
+            Console.WriteLine(testAccount1.GetInfo());
             do
             {
                 Console.WriteLine($"Transaction: {transactionSize}");

@@ -5,20 +5,13 @@ namespace OOP_GB
 {
     public sealed class BankAccount
     {
-        private readonly BankAccountType _type;
+        private static uint _accountCounter;
 
         private readonly string _number;
 
+        private readonly BankAccountType _type;
+
         private decimal _balance;
-
-        private static uint _accountCounter;
-
-
-        public BankAccountType Type => _type;
-
-        public string Number => _number;
-
-        public decimal Balance => _balance;
 
 
         public BankAccount() : this(BankAccountType.Checking) { }
@@ -27,11 +20,17 @@ namespace OOP_GB
 
         public BankAccount(BankAccountType type, decimal balance)
         {
-            _number = GenerateAccountNumber();
+            _number = GenerateAccountNumber((int)++_accountCounter);
             _balance = balance;
             _type = type;
         }
 
+
+        public BankAccountType Type => _type;
+
+        public string Number => _number;
+
+        public decimal Balance => _balance;
 
         /// <returns>Return 'true', if operation completed successfully</returns>
         public bool Deposit(decimal amount)
@@ -62,15 +61,18 @@ namespace OOP_GB
                     $"Balance: {_balance}\n";
         }
 
-        private static string GenerateAccountNumber()
+
+        private string GenerateAccountNumber(int value)
         {
-            _accountCounter++;
             int accountNumberLength = 20;
-            int emptySymbolCount = accountNumberLength - _accountCounter.ToString().Length;
+            int emptySymbolCount = accountNumberLength - value.ToString().Length;
             StringBuilder result = new StringBuilder(accountNumberLength);
             for (int i = 0; i < emptySymbolCount; i++)
+            {
                 result.Append('0');
-            result.Append(_accountCounter.ToString());
+            }
+            result.Append(value.ToString());
+
             return result.ToString();
         }
     }
