@@ -18,10 +18,11 @@ C:\Users\zheka\source\repos\OOP_GB\OOP_GB\OOP_GB\bin\Debug\netcoreapp3.1\OOP_GB.
 C:\Users\zheka\source\repos\OOP_GB\OOP_GB\OOP_GB\bin\Debug\netcoreapp3.1\OOP_GB.runtimeconfig.dev.json
 C:\Users\zheka\source\repos\OOP_GB\OOP_GB\OOP_GB\bin\Debug\netcoreapp3.1\OOP_GB.dll
 C:\Users\zheka\source\repos\OOP_GB\OOP_GB\OOP_GB\bin\Debug\netcoreapp3.1\OOP_GB.pdb
-C:\Users\zheka\source\repos\OOP_GB\OOP_GB\OOP_GB\obj\Debug\netcoreapp3.1\OOP_GB.csprojAssemblyReference.cache
 C:\Users\zheka\source\repos\OOP_GB\OOP_GB\OOP_GB\obj\Debug\netcoreapp3.1\OOP_GB.AssemblyInfoInputs.cache
 C:\Users\zheka\source\repos\OOP_GB\OOP_GB\OOP_GB\obj\Debug\netcoreapp3.1\OOP_GB.AssemblyInfo.cs
 C:\Users\zheka\source\repos\OOP_GB\OOP_GB\OOP_GB\obj\Debug\netcoreapp3.1\OOP_GB.csproj.CoreCompileInputs.cache
 C:\Users\zheka\source\repos\OOP_GB\OOP_GB\OOP_GB\obj\Debug\netcoreapp3.1\OOP_GB.dll
 C:\Users\zheka\source\repos\OOP_GB\OOP_GB\OOP_GB\obj\Debug\netcoreapp3.1\OOP_GB.pdb
 C:\Users\zheka\source\repos\OOP_GB\OOP_GB\OOP_GB\obj\Debug\netcoreapp3.1\OOP_GB.genruntimeconfig.cache
+C:\Users\zheka\source\repos\OOP_GB\OOP_GB\OOP_GB\obj\Debug\netcoreapp3.1\OOP_GB.csproj.AssemblyReference.cache
+C:\Users\zheka\source\repos\OOP_GB\OOP_GB\OOP_GB\obj\Debug\netcoreapp3.1\OOP_GB.GeneratedMSBuildEditorConfig.editorconfig

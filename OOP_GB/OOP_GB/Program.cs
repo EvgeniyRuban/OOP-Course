@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Text;
-using OOP_GB.Enums;
 
 namespace OOP_GB
 {
@@ -8,14 +7,14 @@ namespace OOP_GB
     {
         public static void Main(string[] args)
         {
-            string example1 = "новая_строка";
-            string example2 = Reverse(example1);
-            Console.WriteLine(example1);
-            Console.WriteLine(example2);
+            string s = "Кучма Андрей Витальевич & Kuchma@mail.ru " +
+                "Мизинцев Павел Николаевич & Pasha@mail.ru";
 
+            SearchMail(ref s);
+
+            Console.Write(s);
             Console.ReadKey();
         }
-
 
         public static string Reverse(string word)
         {
@@ -26,6 +25,24 @@ namespace OOP_GB
             }
 
             return result.ToString();
+        }
+
+        public static void SearchMail(ref string s)
+        {
+            char mailSymbol = '@';
+            char splitter = ' ';
+            StringBuilder temp = new StringBuilder(s.Length);
+            string[] content = s.Split(splitter, StringSplitOptions.RemoveEmptyEntries);
+
+            s = s.Remove(0);
+            foreach(string item in content)
+            {
+                if(item.Contains(mailSymbol))
+                {
+                    temp.AppendLine(item);
+                }
+            }
+            s = temp.ToString();
         }
     }
 }
