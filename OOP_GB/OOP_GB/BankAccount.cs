@@ -1,5 +1,5 @@
-﻿using OOP_GB.Enums;
-using System.Text;
+﻿using System.Text;
+using OOP_GB.Enums;
 
 namespace OOP_GB
 {
@@ -49,6 +49,16 @@ namespace OOP_GB
             if(_balance - amount >= 0)
             {
                 _balance -= amount;
+                return true;
+            }
+            return false;
+        }
+
+        public bool Transfer(ref BankAccount account, decimal amount)
+        {
+            if(Withdraw(amount))
+            {
+                account.Deposit(amount);
                 return true;
             }
             return false;

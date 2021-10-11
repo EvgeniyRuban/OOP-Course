@@ -1,25 +1,31 @@
 ﻿using System;
+using System.Text;
 using OOP_GB.Enums;
 
 namespace OOP_GB
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            BankAccount testAccount = new BankAccount(BankAccountType.Checking, 10000);
-            BankAccount testAccount1 = new BankAccount(BankAccountType.Checking, 10000);
-            decimal transactionSize = 999.99M;
-            Console.WriteLine("Init state:\n");
-            Console.WriteLine(testAccount.GetInfo());
-            Console.WriteLine(testAccount1.GetInfo());
-            do
-            {
-                Console.WriteLine($"Transaction: {transactionSize}");
-                Console.WriteLine($"Balance: {testAccount.Balance}\n");
-            }
-            while (testAccount.Withdraw(transactionSize));
+            string example1 = "новая_строка";
+            string example2 = Reverse(example1);
+            Console.WriteLine(example1);
+            Console.WriteLine(example2);
+
             Console.ReadKey();
+        }
+
+
+        public static string Reverse(string word)
+        {
+            StringBuilder result = new StringBuilder(word.Length);
+            for(int i = word.Length - 1; i >= 0; i--)
+            {
+                result.Append(word[i]);
+            }
+
+            return result.ToString();
         }
     }
 }
