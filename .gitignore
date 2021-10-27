@@ -16,3 +16,7 @@ OOP_GB/OOP_GB/obj/OOP_GB.csproj.nuget.dgspec.json
 OOP_GB/OOP_GB/obj/OOP_GB.csproj.nuget.g.props
 OOP_GB/OOP_GB/obj/project.assets.json
 OOP_GB/OOP_GB/obj/project.nuget.cache
+*.dll
+*.cache
+*.pdb
+*.cache
