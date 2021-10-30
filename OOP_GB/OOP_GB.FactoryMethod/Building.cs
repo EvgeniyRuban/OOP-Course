@@ -1,6 +1,6 @@
 ﻿
 
-namespace OOP_GB
+namespace OOP_GB.FactoryMethod
 {
     internal class Building
     {

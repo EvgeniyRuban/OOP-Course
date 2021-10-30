@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace OOP_GB
+namespace OOP_GB.FactoryMethod
 {
     internal sealed class Creator
     {
