@@ -2,9 +2,9 @@
 
 namespace OOP_GB
 {
-    public sealed class Building
+    internal class Building
     {
-        private uint _number;
+        private int _number;
 
         private double _height;
 
@@ -15,7 +15,7 @@ namespace OOP_GB
         private uint _entrancesCount;
 
 
-        private static uint _lastNumber;
+        private static int _lastNumber;
 
 
         public Building() : this(0, 0, 0, 0) { }
@@ -34,7 +34,7 @@ namespace OOP_GB
         }
 
 
-        public uint Number => _number;
+        public int Number => _number;
 
         public double Height => _height;
 
@@ -82,6 +82,6 @@ namespace OOP_GB
         }
 
 
-        private static uint GenerateNumber() => ++_lastNumber;
+        private static int GenerateNumber() => ++_lastNumber;
     }
 }
