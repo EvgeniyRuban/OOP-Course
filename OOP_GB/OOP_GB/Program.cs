@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Text;
-using OOP_GB.FactoryMethod;
+using OOP_GB.Polymorphism;
 
 namespace OOP_GB
 {
@@ -8,7 +8,9 @@ namespace OOP_GB
     {
         public static void Main(string[] args)
         {
-            TestExample.Execute();
+            RationalNumber rn1 = new RationalNumber(10, 4);
+            RationalNumber rn2 = new RationalNumber(-5, 10);
+            Console.WriteLine(rn1.ToString());
 
             Console.ReadKey();
         }
