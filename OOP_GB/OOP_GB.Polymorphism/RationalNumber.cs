@@ -1,15 +1,15 @@
-﻿using System.Text;
+﻿using System;
 
 namespace OOP_GB.Polymorphism
 {
-    public sealed class RationalNumber
+    public sealed class RationalNumber : IEquatable<RationalNumber>
     {
         private int _numerator;
 
         private int _denominator;
 
 
-        public RationalNumber() : this(1, 1) { }
+        public RationalNumber() : this(0, 1) { }
 
         public RationalNumber(int numerator, int denominator)
         {
@@ -23,132 +23,192 @@ namespace OOP_GB.Polymorphism
         public int Denominator => _denominator;
 
 
-        public static RationalNumber operator ++(RationalNumber number) //Тест
+        public static RationalNumber operator ++(RationalNumber number)
         {
             return new RationalNumber(
                 number._numerator + number._denominator,
                 number._denominator);
         }
 
-        public static RationalNumber operator --(RationalNumber number) //Тест
+        public static RationalNumber operator --(RationalNumber number)
         {
             return new RationalNumber(
                 number._numerator - number._denominator,
                 number._denominator);
         }
 
-        public static RationalNumber operator +(RationalNumber num1, RationalNumber num2) //Дописать
+        public static RationalNumber operator +(RationalNumber num1, RationalNumber num2)
         {
-            int lcm = Algorithms.Lcm(num1.Denominator, num2.Denominator);
-            return new RationalNumber(
-                num1.Numerator * (lcm / num1.Denominator) + num2.Numerator * (lcm / num2.Denominator),
+            int lcm = 0;
+            if (num1._denominator != num2._denominator)
+            {
+                lcm = Algorithms.Lcm(num1._denominator, num2._denominator);
+            }
+
+            RationalNumber result = new RationalNumber(
+                num1._numerator * (lcm / num1._denominator) + num2._numerator * (lcm / num2._denominator),
                 lcm);
+
+            TrySimplify(result);
+
+            return result;
         }
 
-        public static RationalNumber operator -(RationalNumber num1, RationalNumber num2) //Дописать
+        public static RationalNumber operator -(RationalNumber num1, RationalNumber num2)
         {
-            return null;
+            int lcm = 0;
+            if (num1._denominator != num2._denominator)
+            {
+                lcm = Algorithms.Lcm(num1._denominator, num2._denominator);
+            }
+
+            RationalNumber result = new RationalNumber(
+                num1._numerator * (lcm / num1._denominator) - num2._numerator * (lcm / num2._denominator),
+                lcm);
+
+            TrySimplify(result);
+
+            return result;
         }
 
-        public static RationalNumber operator *(RationalNumber num1, RationalNumber num2) //Дописать
+        public static RationalNumber operator *(RationalNumber num1, RationalNumber num2)
         {
-            return null;
+            RationalNumber result = new RationalNumber(
+                num1._numerator * num2._numerator,
+                num1._denominator * num2._denominator);
+
+            int gcd = Algorithms.Gcd(result._numerator, result._denominator);
+            while (gcd > 1)
+            {
+                result._numerator /= gcd;
+                result._denominator /= gcd;
+                gcd = Algorithms.Gcd(result._numerator, result._denominator);
+            }
+            return result;
         }
 
-        public static RationalNumber operator /(RationalNumber num1, RationalNumber num2) //Дописать
+        public static RationalNumber operator /(RationalNumber num1, RationalNumber num2)
         {
-            return null;
+            int temp = num2._denominator;
+            num2._denominator = num2._numerator;
+            num2._numerator = temp;
+            if (num2._denominator < 0)
+            {
+                num2._denominator *= -1;
+                num2._numerator *= -1;
+            }
+            return num1 * num2;
         }
 
-        public static RationalNumber operator %(RationalNumber num1, RationalNumber num2) //Дописать
+        public static bool operator ==(RationalNumber num1, RationalNumber num2)
         {
-            return null;
+            if (num1._denominator != num2._denominator)
+            {
+                int lcm = Algorithms.Lcm(num1._denominator, num2._denominator);
+                num1._numerator *= (lcm / num1._denominator);
+                num2._numerator *= (lcm / num2._denominator);
+            }
+            return num1._numerator == num2._numerator;
         }
 
-        public static bool operator ==(RationalNumber num1, RationalNumber num2) //Дописать
+        public static bool operator !=(RationalNumber num1, RationalNumber num2)
         {
-            return false;
+            if (num1._denominator != num2._denominator)
+            {
+                int lcm = Algorithms.Lcm(num1._denominator, num2._denominator);
+                num1._numerator *= (lcm / num1._denominator);
+                num2._numerator *= (lcm / num2._denominator);
+            }
+            return num1._numerator != num2._numerator;
         }
 
-        public static bool operator !=(RationalNumber num1, RationalNumber num2) //Дописать
+        public static bool operator <(RationalNumber num1, RationalNumber num2)
         {
-            return false;
+            if (num1._denominator != num2._denominator)
+            {
+                int lcm = Algorithms.Lcm(num1._denominator, num2._denominator);
+                num1._numerator *= (lcm / num1._denominator);
+                num2._numerator *= (lcm / num2._denominator);
+            }
+            return num1._numerator < num2._numerator;
         }
 
-        public static bool operator <(RationalNumber num1, RationalNumber num2) //Дописать
+        public static bool operator >(RationalNumber num1, RationalNumber num2)
         {
-            return false;
+            if (num1._denominator != num2._denominator)
+            {
+                int lcm = Algorithms.Lcm(num1._denominator, num2._denominator);
+                num1._numerator *= (lcm / num1._denominator);
+                num2._numerator *= (lcm / num2._denominator);
+            }
+            return num1._numerator > num2._numerator;
         }
 
-        public static bool operator >(RationalNumber num1, RationalNumber num2) //Дописать
+        public static bool operator <=(RationalNumber num1, RationalNumber num2)
         {
-            return false;
+            if (num1._denominator != num2._denominator)
+            {
+                int lcm = Algorithms.Lcm(num1._denominator, num2._denominator);
+                num1._numerator *= (lcm / num1._denominator);
+                num2._numerator *= (lcm / num2._denominator);
+            }
+            return num1._numerator <= num2._numerator;
         }
 
-        public static bool operator <=(RationalNumber num1, RationalNumber num2) //Дописать
+        public static bool operator >=(RationalNumber num1, RationalNumber num2)
         {
-            return false;
+            if (num1._denominator != num2._denominator)
+            {
+                int lcm = Algorithms.Lcm(num1._denominator, num2._denominator);
+                num1._numerator *= (lcm / num1._denominator);
+                num2._numerator *= (lcm / num2._denominator);
+            }
+            return num1._numerator >= num2._numerator;
         }
 
-        public static bool operator >=(RationalNumber num1, RationalNumber num2) //Дописать
+        public static implicit operator int(RationalNumber number)=> number._numerator / number._denominator;
+
+        public static implicit operator float(RationalNumber number) => (float) number._numerator / number._denominator;
+
+        public static implicit operator double(RationalNumber number) => (double)number._numerator / number._denominator;
+
+        public static implicit operator decimal(RationalNumber number) => (decimal)number._numerator / number._denominator;
+
+        public static RationalNumber ConvertFrom(decimal value)
         {
-            return false;
+            string[] temp = value.ToString().Split(',');
+            if (temp.Length == 1)
+            {
+                return new RationalNumber((int)value, 1);
+            }
+            int scale = (int)Math.Pow(10, temp[1].Length);
+            RationalNumber result = new RationalNumber((int)(value * scale), scale);
+            TrySimplify(result);
+
+            return result;
         }
 
-        public static implicit operator int(RationalNumber number) //Дописать
-        {
-            return number._numerator / number._denominator;
-        }
-
-        public static implicit operator float(RationalNumber number) //Дописать
-        {
-            return 0;
-        }
-
-        public static implicit operator decimal(RationalNumber number) //Дописать
-        {
-            return 0;
-        }
+        public bool Equals(RationalNumber number) => this == number;
 
         public override string ToString()
         {
-            if (_denominator == 0) return "(incorrect)";
-            StringBuilder result = new StringBuilder();
-
-            // Убираем знак
-            var sa = _numerator < 0 ? -1 : 1;
-            var sb = _denominator < 0 ? -1 : 1;
-            if (sa * sb == -1) result.Append('-');
-            _numerator *= sa; _denominator *= sb;
-
-            // Выделяем целую часть
-            result.Append(_numerator / _denominator);
-            _numerator = _numerator % _denominator;
-
-            // Выделяем дробную часть
-            if (_numerator == 0) return result.ToString();
-            var rems = new int[_denominator];
-            result.Append('.');
-            while (_numerator > 0)
-            {
-                rems[_numerator] = result.Length;
-                _numerator = _numerator * 10;
-                result.Append(_numerator / _denominator);
-                _numerator = _numerator % _denominator;
-                if (rems[_numerator] > 0)
-                {
-                    result.Insert(rems[_numerator], '(');
-                    result.Append(')');
-                    break;
-                }
-                rems[_numerator] = result.Length;
-            }
+            float result = this;
             return result.ToString();
         }
 
-        public override bool Equals(object obj) //Дописать
+        public override bool Equals(object obj) => Equals(obj as RationalNumber);
+
+        public override int GetHashCode() => base.GetHashCode();
+
+        private static void TrySimplify(RationalNumber number)
         {
-            return base.Equals(obj);
+            int gcd = Algorithms.Gcd(number._numerator, number._denominator);
+            while (gcd > 1)
+            {
+                number._numerator /= gcd;
+                number._denominator /= gcd;
+                gcd = Algorithms.Gcd(number._numerator, number._denominator);
+            }
         }
     }
 }
