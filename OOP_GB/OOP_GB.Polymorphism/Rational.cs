@@ -2,16 +2,16 @@
 
 namespace OOP_GB.Polymorphism
 {
-    public sealed class RationalNumber : IEquatable<RationalNumber>
+    public sealed class Rational : IEquatable<Rational>
     {
         private int _numerator;
 
         private int _denominator;
 
 
-        public RationalNumber() : this(0, 1) { }
+        public Rational() : this(0, 1) { }
 
-        public RationalNumber(int numerator, int denominator)
+        public Rational(int numerator, int denominator)
         {
             _numerator = numerator;
             _denominator = denominator;
@@ -23,21 +23,21 @@ namespace OOP_GB.Polymorphism
         public int Denominator => _denominator;
 
 
-        public static RationalNumber operator ++(RationalNumber number)
+        public static Rational operator ++(Rational number)
         {
-            return new RationalNumber(
+            return new Rational(
                 number._numerator + number._denominator,
                 number._denominator);
         }
 
-        public static RationalNumber operator --(RationalNumber number)
+        public static Rational operator --(Rational number)
         {
-            return new RationalNumber(
+            return new Rational(
                 number._numerator - number._denominator,
                 number._denominator);
         }
 
-        public static RationalNumber operator +(RationalNumber num1, RationalNumber num2)
+        public static Rational operator +(Rational num1, Rational num2)
         {
             int lcm = 0;
             if (num1._denominator != num2._denominator)
@@ -45,7 +45,7 @@ namespace OOP_GB.Polymorphism
                 lcm = Algorithms.Lcm(num1._denominator, num2._denominator);
             }
 
-            RationalNumber result = new RationalNumber(
+            Rational result = new Rational(
                 num1._numerator * (lcm / num1._denominator) + num2._numerator * (lcm / num2._denominator),
                 lcm);
 
@@ -54,7 +54,7 @@ namespace OOP_GB.Polymorphism
             return result;
         }
 
-        public static RationalNumber operator -(RationalNumber num1, RationalNumber num2)
+        public static Rational operator -(Rational num1, Rational num2)
         {
             int lcm = 0;
             if (num1._denominator != num2._denominator)
@@ -62,7 +62,7 @@ namespace OOP_GB.Polymorphism
                 lcm = Algorithms.Lcm(num1._denominator, num2._denominator);
             }
 
-            RationalNumber result = new RationalNumber(
+            Rational result = new Rational(
                 num1._numerator * (lcm / num1._denominator) - num2._numerator * (lcm / num2._denominator),
                 lcm);
 
@@ -71,9 +71,9 @@ namespace OOP_GB.Polymorphism
             return result;
         }
 
-        public static RationalNumber operator *(RationalNumber num1, RationalNumber num2)
+        public static Rational operator *(Rational num1, Rational num2)
         {
-            RationalNumber result = new RationalNumber(
+            Rational result = new Rational(
                 num1._numerator * num2._numerator,
                 num1._denominator * num2._denominator);
 
@@ -87,7 +87,7 @@ namespace OOP_GB.Polymorphism
             return result;
         }
 
-        public static RationalNumber operator /(RationalNumber num1, RationalNumber num2)
+        public static Rational operator /(Rational num1, Rational num2)
         {
             int temp = num2._denominator;
             num2._denominator = num2._numerator;
@@ -100,7 +100,7 @@ namespace OOP_GB.Polymorphism
             return num1 * num2;
         }
 
-        public static bool operator ==(RationalNumber num1, RationalNumber num2)
+        public static bool operator ==(Rational num1, Rational num2)
         {
             if (num1._denominator != num2._denominator)
             {
@@ -111,7 +111,7 @@ namespace OOP_GB.Polymorphism
             return num1._numerator == num2._numerator;
         }
 
-        public static bool operator !=(RationalNumber num1, RationalNumber num2)
+        public static bool operator !=(Rational num1, Rational num2)
         {
             if (num1._denominator != num2._denominator)
             {
@@ -122,7 +122,7 @@ namespace OOP_GB.Polymorphism
             return num1._numerator != num2._numerator;
         }
 
-        public static bool operator <(RationalNumber num1, RationalNumber num2)
+        public static bool operator <(Rational num1, Rational num2)
         {
             if (num1._denominator != num2._denominator)
             {
@@ -133,7 +133,7 @@ namespace OOP_GB.Polymorphism
             return num1._numerator < num2._numerator;
         }
 
-        public static bool operator >(RationalNumber num1, RationalNumber num2)
+        public static bool operator >(Rational num1, Rational num2)
         {
             if (num1._denominator != num2._denominator)
             {
@@ -144,7 +144,7 @@ namespace OOP_GB.Polymorphism
             return num1._numerator > num2._numerator;
         }
 
-        public static bool operator <=(RationalNumber num1, RationalNumber num2)
+        public static bool operator <=(Rational num1, Rational num2)
         {
             if (num1._denominator != num2._denominator)
             {
@@ -155,7 +155,7 @@ namespace OOP_GB.Polymorphism
             return num1._numerator <= num2._numerator;
         }
 
-        public static bool operator >=(RationalNumber num1, RationalNumber num2)
+        public static bool operator >=(Rational num1, Rational num2)
         {
             if (num1._denominator != num2._denominator)
             {
@@ -166,29 +166,29 @@ namespace OOP_GB.Polymorphism
             return num1._numerator >= num2._numerator;
         }
 
-        public static implicit operator int(RationalNumber number)=> number._numerator / number._denominator;
+        public static implicit operator int(Rational number)=> number._numerator / number._denominator;
 
-        public static implicit operator float(RationalNumber number) => (float) number._numerator / number._denominator;
+        public static implicit operator float(Rational number) => (float) number._numerator / number._denominator;
 
-        public static implicit operator double(RationalNumber number) => (double)number._numerator / number._denominator;
+        public static implicit operator double(Rational number) => (double)number._numerator / number._denominator;
 
-        public static implicit operator decimal(RationalNumber number) => (decimal)number._numerator / number._denominator;
+        public static implicit operator decimal(Rational number) => (decimal)number._numerator / number._denominator;
 
-        public static RationalNumber ConvertFrom(decimal value)
+        public static Rational ConvertFrom(decimal value)
         {
             string[] temp = value.ToString().Split(',');
             if (temp.Length == 1)
             {
-                return new RationalNumber((int)value, 1);
+                return new Rational((int)value, 1);
             }
             int scale = (int)Math.Pow(10, temp[1].Length);
-            RationalNumber result = new RationalNumber((int)(value * scale), scale);
+            Rational result = new Rational((int)(value * scale), scale);
             TrySimplify(result);
 
             return result;
         }
 
-        public bool Equals(RationalNumber number) => this == number;
+        public bool Equals(Rational number) => this == number;
 
         public override string ToString()
         {
@@ -196,11 +196,11 @@ namespace OOP_GB.Polymorphism
             return result.ToString();
         }
 
-        public override bool Equals(object obj) => Equals(obj as RationalNumber);
+        public override bool Equals(object obj) => Equals(obj as Rational);
 
         public override int GetHashCode() => base.GetHashCode();
 
-        private static void TrySimplify(RationalNumber number)
+        private static void TrySimplify(Rational number)
         {
             int gcd = Algorithms.Gcd(number._numerator, number._denominator);
             while (gcd > 1)

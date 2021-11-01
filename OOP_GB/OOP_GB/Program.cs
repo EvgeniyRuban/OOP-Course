@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Text;
-using OOP_GB.Polymorphism;
 
 namespace OOP_GB
 {
