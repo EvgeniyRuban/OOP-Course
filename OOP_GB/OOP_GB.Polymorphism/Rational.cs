@@ -9,7 +9,9 @@ namespace OOP_GB.Polymorphism
         private int _denominator;
 
 
-        public Rational() : this(0, 1) { }
+        public Rational() : this(0, 1) 
+        {
+        }
 
         public Rational(int numerator, int denominator)
         {
@@ -39,7 +41,7 @@ namespace OOP_GB.Polymorphism
 
         public static Rational operator +(Rational num1, Rational num2)
         {
-            int lcm = 0;
+            int lcm = 1;
             if (num1._denominator != num2._denominator)
             {
                 lcm = Algorithms.Lcm(num1._denominator, num2._denominator);
@@ -56,7 +58,7 @@ namespace OOP_GB.Polymorphism
 
         public static Rational operator -(Rational num1, Rational num2)
         {
-            int lcm = 0;
+            int lcm = 1;
             if (num1._denominator != num2._denominator)
             {
                 lcm = Algorithms.Lcm(num1._denominator, num2._denominator);
@@ -166,13 +168,13 @@ namespace OOP_GB.Polymorphism
             return num1._numerator >= num2._numerator;
         }
 
-        public static implicit operator int(Rational number)=> number._numerator / number._denominator;
+        public static explicit operator int(Rational number)=> number._numerator / number._denominator;
 
-        public static implicit operator float(Rational number) => (float) number._numerator / number._denominator;
+        public static explicit operator float(Rational number) => (float) number._numerator / number._denominator;
 
-        public static implicit operator double(Rational number) => (double)number._numerator / number._denominator;
+        public static explicit operator double(Rational number) => (double)number._numerator / number._denominator;
 
-        public static implicit operator decimal(Rational number) => (decimal)number._numerator / number._denominator;
+        public static explicit operator decimal(Rational number) => (decimal)number._numerator / number._denominator;
 
         public static Rational ConvertFrom(decimal value)
         {
@@ -192,7 +194,7 @@ namespace OOP_GB.Polymorphism
 
         public override string ToString()
         {
-            float result = this;
+            float result = (float)this;
             return result.ToString();
         }
 
