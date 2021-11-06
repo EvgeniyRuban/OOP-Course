@@ -1,7 +1,6 @@
 ﻿using System.Text;
-using OOP_GB.Enums;
 
-namespace OOP_GB
+namespace OOP_GB.Inheritance
 {
     public sealed class BankAccount
     {
@@ -14,9 +13,13 @@ namespace OOP_GB
         private decimal _balance;
 
 
-        public BankAccount() : this(BankAccountType.Checking) { }
+        public BankAccount() : this(BankAccountType.Checking) 
+        { 
+        }
 
-        public BankAccount(BankAccountType type) : this(type, 0) { }
+        public BankAccount(BankAccountType type) : this(type, 0) 
+        { 
+        }
 
         public BankAccount(BankAccountType type, decimal balance)
         {
@@ -26,22 +29,26 @@ namespace OOP_GB
         }
 
 
+        public static bool operator ==(BankAccount account1, BankAccount account2)
+        {
+            return account1._balance == account2._balance  
+                && account1._type == account2._type;
+        }
+
+        public static bool operator !=(BankAccount account1, BankAccount account2)
+        {
+            return account1._balance != account2._balance  
+                || account1._type != account2._type;
+        }
+
+
         public BankAccountType Type => _type;
 
         public string Number => _number;
 
         public decimal Balance => _balance;
 
-        /// <returns>Return 'true', if operation completed successfully</returns>
-        public bool Deposit(decimal amount)
-        {
-            if (amount > 0)
-            {
-                _balance += amount;
-                return true;
-            }
-            return false;
-        }
+        public void Deposit(decimal amount) => _balance += amount;
 
         /// <returns>Return 'true', if operation completed successfully</returns>
         public bool Withdraw(decimal amount)
@@ -54,7 +61,8 @@ namespace OOP_GB
             return false;
         }
 
-        public bool Transfer(ref BankAccount account, decimal amount)
+        /// <returns>Return 'true', if operation completed successfully</returns>
+        public bool Transfer(BankAccount account, decimal amount)
         {
             if(Withdraw(amount))
             {
@@ -64,13 +72,18 @@ namespace OOP_GB
             return false;
         }
 
-        public string GetInfo()
+        public bool Equal(BankAccount account) => account == this;
+
+        public override string ToString()
         {
             return $"Account number: {_number}\n" +
                     $"Type: {_type}\n" +
                     $"Balance: {_balance}\n";
         }
 
+        public override bool Equals(object obj) => Equal(obj as BankAccount);
+
+        public override int GetHashCode() =>_number.GetHashCode() + _type.GetHashCode() + _balance.GetHashCode();
 
         private string GenerateAccountNumber(int value)
         {

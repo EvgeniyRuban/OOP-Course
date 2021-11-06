@@ -1,6 +1,6 @@
 ﻿
 
-namespace OOP_GB.Enums
+namespace OOP_GB.Inheritance
 {
     public enum BankAccountType
     {
