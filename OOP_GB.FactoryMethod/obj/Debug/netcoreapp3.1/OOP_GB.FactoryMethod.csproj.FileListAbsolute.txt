@@ -1,0 +1,10 @@
+C:\Users\Eugene\Documents\GitHub\OOP_GB\OOP_GB.FactoryMethod\bin\Debug\netcoreapp3.1\OOP_GB.FactoryMethod.deps.json
+C:\Users\Eugene\Documents\GitHub\OOP_GB\OOP_GB.FactoryMethod\bin\Debug\netcoreapp3.1\OOP_GB.FactoryMethod.dll
+C:\Users\Eugene\Documents\GitHub\OOP_GB\OOP_GB.FactoryMethod\bin\Debug\netcoreapp3.1\OOP_GB.FactoryMethod.pdb
+C:\Users\Eugene\Documents\GitHub\OOP_GB\OOP_GB.FactoryMethod\obj\Debug\netcoreapp3.1\OOP_GB.FactoryMethod.csproj.AssemblyReference.cache
+C:\Users\Eugene\Documents\GitHub\OOP_GB\OOP_GB.FactoryMethod\obj\Debug\netcoreapp3.1\OOP_GB.FactoryMethod.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Eugene\Documents\GitHub\OOP_GB\OOP_GB.FactoryMethod\obj\Debug\netcoreapp3.1\OOP_GB.FactoryMethod.AssemblyInfoInputs.cache
+C:\Users\Eugene\Documents\GitHub\OOP_GB\OOP_GB.FactoryMethod\obj\Debug\netcoreapp3.1\OOP_GB.FactoryMethod.AssemblyInfo.cs
+C:\Users\Eugene\Documents\GitHub\OOP_GB\OOP_GB.FactoryMethod\obj\Debug\netcoreapp3.1\OOP_GB.FactoryMethod.csproj.CoreCompileInputs.cache
+C:\Users\Eugene\Documents\GitHub\OOP_GB\OOP_GB.FactoryMethod\obj\Debug\netcoreapp3.1\OOP_GB.FactoryMethod.dll
+C:\Users\Eugene\Documents\GitHub\OOP_GB\OOP_GB.FactoryMethod\obj\Debug\netcoreapp3.1\OOP_GB.FactoryMethod.pdb
