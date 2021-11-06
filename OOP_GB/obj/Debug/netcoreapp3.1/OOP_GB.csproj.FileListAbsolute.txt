@@ -1,0 +1,14 @@
+C:\Users\Eugene\Documents\GitHub\OOP_GB\OOP_GB\bin\Debug\netcoreapp3.1\OOP_GB.exe
+C:\Users\Eugene\Documents\GitHub\OOP_GB\OOP_GB\bin\Debug\netcoreapp3.1\OOP_GB.deps.json
+C:\Users\Eugene\Documents\GitHub\OOP_GB\OOP_GB\bin\Debug\netcoreapp3.1\OOP_GB.runtimeconfig.json
+C:\Users\Eugene\Documents\GitHub\OOP_GB\OOP_GB\bin\Debug\netcoreapp3.1\OOP_GB.runtimeconfig.dev.json
+C:\Users\Eugene\Documents\GitHub\OOP_GB\OOP_GB\bin\Debug\netcoreapp3.1\OOP_GB.dll
+C:\Users\Eugene\Documents\GitHub\OOP_GB\OOP_GB\bin\Debug\netcoreapp3.1\OOP_GB.pdb
+C:\Users\Eugene\Documents\GitHub\OOP_GB\OOP_GB\obj\Debug\netcoreapp3.1\OOP_GB.csproj.AssemblyReference.cache
+C:\Users\Eugene\Documents\GitHub\OOP_GB\OOP_GB\obj\Debug\netcoreapp3.1\OOP_GB.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Eugene\Documents\GitHub\OOP_GB\OOP_GB\obj\Debug\netcoreapp3.1\OOP_GB.AssemblyInfoInputs.cache
+C:\Users\Eugene\Documents\GitHub\OOP_GB\OOP_GB\obj\Debug\netcoreapp3.1\OOP_GB.AssemblyInfo.cs
+C:\Users\Eugene\Documents\GitHub\OOP_GB\OOP_GB\obj\Debug\netcoreapp3.1\OOP_GB.csproj.CoreCompileInputs.cache
+C:\Users\Eugene\Documents\GitHub\OOP_GB\OOP_GB\obj\Debug\netcoreapp3.1\OOP_GB.dll
+C:\Users\Eugene\Documents\GitHub\OOP_GB\OOP_GB\obj\Debug\netcoreapp3.1\OOP_GB.pdb
+C:\Users\Eugene\Documents\GitHub\OOP_GB\OOP_GB\obj\Debug\netcoreapp3.1\OOP_GB.genruntimeconfig.cache

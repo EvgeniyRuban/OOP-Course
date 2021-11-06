@@ -1,0 +1,13 @@
+C:\Users\Eugene\Documents\GitHub\OOP_GB\OOP_GB.Polymophism\bin\Debug\netcoreapp3.1\OOP_GB.Polymophism.deps.json
+C:\Users\Eugene\Documents\GitHub\OOP_GB\OOP_GB.Polymophism\bin\Debug\netcoreapp3.1\OOP_GB.Polymophism.dll
+C:\Users\Eugene\Documents\GitHub\OOP_GB\OOP_GB.Polymophism\bin\Debug\netcoreapp3.1\OOP_GB.Polymophism.pdb
+C:\Users\Eugene\Documents\GitHub\OOP_GB\OOP_GB.Polymophism\bin\Debug\netcoreapp3.1\Algorithms.dll
+C:\Users\Eugene\Documents\GitHub\OOP_GB\OOP_GB.Polymophism\bin\Debug\netcoreapp3.1\Algorithms.pdb
+C:\Users\Eugene\Documents\GitHub\OOP_GB\OOP_GB.Polymophism\obj\Debug\netcoreapp3.1\OOP_GB.Polymophism.csproj.AssemblyReference.cache
+C:\Users\Eugene\Documents\GitHub\OOP_GB\OOP_GB.Polymophism\obj\Debug\netcoreapp3.1\OOP_GB.Polymophism.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Eugene\Documents\GitHub\OOP_GB\OOP_GB.Polymophism\obj\Debug\netcoreapp3.1\OOP_GB.Polymophism.AssemblyInfoInputs.cache
+C:\Users\Eugene\Documents\GitHub\OOP_GB\OOP_GB.Polymophism\obj\Debug\netcoreapp3.1\OOP_GB.Polymophism.AssemblyInfo.cs
+C:\Users\Eugene\Documents\GitHub\OOP_GB\OOP_GB.Polymophism\obj\Debug\netcoreapp3.1\OOP_GB.Polymophism.csproj.CoreCompileInputs.cache
+C:\Users\Eugene\Documents\GitHub\OOP_GB\OOP_GB.Polymophism\obj\Debug\netcoreapp3.1\OOP_GB.Polymophism.csproj.CopyComplete
+C:\Users\Eugene\Documents\GitHub\OOP_GB\OOP_GB.Polymophism\obj\Debug\netcoreapp3.1\OOP_GB.Polymophism.dll
+C:\Users\Eugene\Documents\GitHub\OOP_GB\OOP_GB.Polymophism\obj\Debug\netcoreapp3.1\OOP_GB.Polymophism.pdb

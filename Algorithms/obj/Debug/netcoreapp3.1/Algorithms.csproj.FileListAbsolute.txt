@@ -1,0 +1,10 @@
+C:\Users\Eugene\Documents\GitHub\OOP_GB\Algorithms\bin\Debug\netcoreapp3.1\Algorithms.deps.json
+C:\Users\Eugene\Documents\GitHub\OOP_GB\Algorithms\bin\Debug\netcoreapp3.1\Algorithms.dll
+C:\Users\Eugene\Documents\GitHub\OOP_GB\Algorithms\bin\Debug\netcoreapp3.1\Algorithms.pdb
+C:\Users\Eugene\Documents\GitHub\OOP_GB\Algorithms\obj\Debug\netcoreapp3.1\Algorithms.csproj.AssemblyReference.cache
+C:\Users\Eugene\Documents\GitHub\OOP_GB\Algorithms\obj\Debug\netcoreapp3.1\Algorithms.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Eugene\Documents\GitHub\OOP_GB\Algorithms\obj\Debug\netcoreapp3.1\Algorithms.AssemblyInfoInputs.cache
+C:\Users\Eugene\Documents\GitHub\OOP_GB\Algorithms\obj\Debug\netcoreapp3.1\Algorithms.AssemblyInfo.cs
+C:\Users\Eugene\Documents\GitHub\OOP_GB\Algorithms\obj\Debug\netcoreapp3.1\Algorithms.csproj.CoreCompileInputs.cache
+C:\Users\Eugene\Documents\GitHub\OOP_GB\Algorithms\obj\Debug\netcoreapp3.1\Algorithms.dll
+C:\Users\Eugene\Documents\GitHub\OOP_GB\Algorithms\obj\Debug\netcoreapp3.1\Algorithms.pdb
