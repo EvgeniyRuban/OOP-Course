@@ -1,5 +1,5 @@
 ﻿using System;
-using OOP_GB.Inheritance;
+
 
 namespace OOP_GB
 {
