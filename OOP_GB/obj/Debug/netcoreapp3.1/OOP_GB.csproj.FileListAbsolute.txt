@@ -12,8 +12,6 @@ C:\Users\Eugene\Documents\GitHub\OOP_GB\OOP_GB\obj\Debug\netcoreapp3.1\OOP_GB.cs
 C:\Users\Eugene\Documents\GitHub\OOP_GB\OOP_GB\obj\Debug\netcoreapp3.1\OOP_GB.dll
 C:\Users\Eugene\Documents\GitHub\OOP_GB\OOP_GB\obj\Debug\netcoreapp3.1\OOP_GB.pdb
 C:\Users\Eugene\Documents\GitHub\OOP_GB\OOP_GB\obj\Debug\netcoreapp3.1\OOP_GB.genruntimeconfig.cache
-C:\Users\Eugene\Documents\GitHub\OOP_GB\OOP_GB\bin\Debug\netcoreapp3.1\OOP_GB.Inheritance.dll
-C:\Users\Eugene\Documents\GitHub\OOP_GB\OOP_GB\bin\Debug\netcoreapp3.1\OOP_GB.Inheritance.pdb
 C:\Users\Eugene\Documents\GitHub\OOP_GB\OOP_GB\obj\Debug\netcoreapp3.1\OOP_GB.csproj.CopyComplete
-C:\Users\Eugene\Documents\GitHub\OOP_GB\OOP_GB\bin\Debug\netcoreapp3.1\Algorithms.dll
-C:\Users\Eugene\Documents\GitHub\OOP_GB\OOP_GB\bin\Debug\netcoreapp3.1\Algorithms.pdb
+C:\Users\Eugene\Documents\GitHub\OOP_GB\OOP_GB\bin\Debug\netcoreapp3.1\OOP_GB.Coder.dll
+C:\Users\Eugene\Documents\GitHub\OOP_GB\OOP_GB\bin\Debug\netcoreapp3.1\OOP_GB.Coder.pdb

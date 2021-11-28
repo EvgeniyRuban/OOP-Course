@@ -42,3 +42,7 @@ OOP_GB.Inheritance/obj/Debug/netcoreapp3.1/OOP_GB.Inheritance.AssemblyInfo.cs
 OOP_GB.Inheritance/obj/Debug/netcoreapp3.1/.NETCoreApp,Version=v3.1.AssemblyAttributes.cs
 OOP_GB/obj/Debug/netcoreapp3.1/OOP_GB.csproj.FileListAbsolute.txt
 *.dll
+OOP_GB.Coder/obj/Debug/netcoreapp3.1/.NETCoreApp,Version=v3.1.AssemblyAttributes.cs
+OOP_GB.Coder/obj/Debug/netcoreapp3.1/OOP_GB.Coder.AssemblyInfo.cs
+OOP_GB.Coder/obj/Debug/netcoreapp3.1/OOP_GB.Coder.GeneratedMSBuildEditorConfig.editorconfig
+OOP_GB/obj/Debug/netcoreapp3.1/OOP_GB.csproj.FileListAbsolute.txt
