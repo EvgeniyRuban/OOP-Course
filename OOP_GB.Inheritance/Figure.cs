@@ -2,7 +2,7 @@
 
 namespace OOP_GB.Inheritance
 {
-    public class Figure
+    public abstract class Figure
     {
         private Position _position;
 

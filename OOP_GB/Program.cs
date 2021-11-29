@@ -12,6 +12,7 @@ namespace OOP_GB
             BCoder bCoder = new BCoder();
             ACoder aCoder = new ACoder();
             Console.WriteLine($"Start value: {s}\n");
+
             while(Console.ReadKey().Key != ConsoleKey.Escape)
             {
                 s = bCoder.Encode(s);

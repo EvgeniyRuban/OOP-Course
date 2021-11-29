@@ -2,7 +2,7 @@
 
 namespace OOP_GB.Inheritance
 {
-    public class Point : Figure
+    public abstract class Point : Figure
     {
         public Point() : this(null)
         {
@@ -13,9 +13,6 @@ namespace OOP_GB.Inheritance
         }
 
 
-        public override string ToString()
-        {
-            return base.ToString();
-        }
+        public override string ToString() => base.ToString();
     }
 }

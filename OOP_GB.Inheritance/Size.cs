@@ -5,6 +5,7 @@ namespace OOP_GB.Inheritance
     public struct Size
     {
         public float Height { get; set; }
+
         public float Width { get; set; }
 
 
